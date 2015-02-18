@@ -1,6 +1,6 @@
 <?php
     require_once(__DIR__ . "/database.php");
-
+    session_start();
     $path = "/GiraldoA-blog/";
 
     $host = "localhost";
@@ -8,4 +8,7 @@
     $password = "root";
     $database = "blog_db";
 
-    $connection = new Database($host, $username, $password, $database);
+    if(!isset($_SESSION["connection"])) {
+        $connection = new Database($host, $username, $password, $database);
+        $_SESSION["connection"] = $connection;
+    }
