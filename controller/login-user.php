@@ -13,10 +13,10 @@
                echo "<p> Login was sucessful!</p>";
            }
            else {
-               echo "<p>Invalid username and password</p>";
+               echo "<p>Invalid username and password1</p>";
            }
     }
     else {
-        echo "<p> Invalid username and password</p>";
+        echo "<p> Invalid username and password2</p>";
     }
     
