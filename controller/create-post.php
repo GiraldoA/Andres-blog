@@ -1,14 +1,15 @@
 <?php
- require_once(__DIR__ . "/../view/navigation.php");
+
+require_once(__DIR__ . "/../view/navigation.php");
 require_once(__DIR__ . "/../model/config.php");
 require_once(__DIR__ . "/../controller/login-verify.php");
-    
-     if(!authenticateUser()) {
-         header("Location: " . $path . "index.php");
-         die();
-    }
 
-/*allows my submit button to work*/
+if (!authenticateUser()) {
+    header("Location: " . $path . "index.php");
+    die();
+}
+
+/* allows my submit button to work */
 $title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);
 $post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 
@@ -16,8 +17,7 @@ $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title',
 
 if ($query) {
     echo "<p>sucessfully inserted post: $title</p>";
-}
-else {
+} else {
     echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
 

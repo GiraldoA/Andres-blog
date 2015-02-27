@@ -11,6 +11,6 @@
         <li><a href="<?php echo $path . "index.php"?>">Home</a></li>
         <li><a href="<?php echo $path . "register.php"?>">Sign up!</a></li>
         <li><a href="<?php echo $path . "login.php"?>">Login</a></li>
-        <li><a href="<?php echo $path . "logout-user.php"?>">Logout</a></li>
+        <li><a href="<?php echo $path . "controller/logout-user.php"?>">Logout</a></li>
     </ul>
 </nav>
