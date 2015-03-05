@@ -21,5 +21,5 @@ if ($query) {
     echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
 
-//closes my connection to the database but i dont need to use it anymore so i have it commented out
+//closes my connection to the database, but i dont need to use it anymore so i have it commented out
 //$connection->close();
